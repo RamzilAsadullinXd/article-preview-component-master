@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/static/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/static/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/static/NotoSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --white: #FFFFFF;
+    --black: #09153e;
+    --blue-dark: #2f364b;
+    --blue-light: #d6e2f5;
+    --gray: #545969;
+    --red: #de473f;
+    --border-color: #c7c7c7;
+    --transition-duration: 0.2s;
+}
+
+body.dark-mode {
+    --white: #212636;
+    --black: #FFFFFF;
+    --blue-dark: #d6e2f5;
+    --blue-light: #09153e;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--blue-light);
+    color: var(--black);
+    font-family: 'Noto Sans';
+    font-size: 16px;
+}
+
+.container {
+    max-width: calc(1440px + 15px * 2);
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    margin-block: 40px 80px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.header__button {
+    width: 48px;
+    height: 48px;
+    background-color: var(--white);
+    border-radius: 8px;
+    transition-duration: var(--transition-duration);
+    border: var(--gray) 1px solid;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.sorting__buttons {
+    display: flex;
+    column-gap: 12px;
+}
+
+.button {
+    padding-inline: 25px;
+    padding-block: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 500;
+    border-radius: 20px;
+    border: var(--border-color) solid 1px;
+    transition-duration: var(--transition-duration);
+}
+
+.button:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.button.is-active {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.content__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cards__card {
+    height: 220px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.cards__card-header {
+    display: flex;
+    align-items: start;
+    column-gap: 20px;
+}
+
+.cards__card-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.cards__card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards-card-toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: var(--gray);
+    border-radius: 50px;
+}
+
+.cards-card-toggle-switch::after {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    content: '';
+    width: 26px;
+    height: 25px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+}
+
+.cards-card-toggle-switch.is-active {
+    background-color: var(--red);
+}
+
+.cards-card-toggle-switch.is-active::after {
+    transform: translateX(70%);
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .content__bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sorting {
+        flex-direction: column;
+    }
+    .content__bottom {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

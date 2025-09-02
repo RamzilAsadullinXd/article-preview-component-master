@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a class="header__logo" href="/">
+        <img src="./assets/images/logo.svg" alt="">
+      </a>
+      <button class="header__button dark" type="button" data-js-theme-toggle>
+        <img src="./assets/images/icon-moon.svg" alt="" data-js-theme-toggle-img>
+      </button>
+    </div>
+
+    <div class="content">
+      <div class="content__top sorting">
+        <h1 class="sorting__title">Extensions list</h1>
+        <div class="sorting__buttons">
+          <button class="sorting__button button is-active" type="button" data-js-card-search data-js-card-search-all>All</button>
+          <button class="sorting__button button" type="button" data-js-card-search data-js-card-search-active>Active</button>
+          <button class="sorting__button button" type="button" data-js-card-search data-js-card-search-inactive>Inactive</button>
+        </div>
+      </div>
+  
+      <ul class="content__bottom cards">
+        <li class="cards__card" data-js-card>
+          <div class="cards__card-header">
+            <img src="./assets/images/logo-devlens.svg" alt="" class="cards__card-img">
+            <div class="cards__card-text">
+              <h2 class="cards__card-title">DevLens</h2>
+              <div class="cards__card-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards__card-footer">
+            <button type="button" class="cards__card-button-remove button button--small" data-js-card-remove>Remove</button>
+            <button type="button" class="cards-card-toggle-switch is-active" data-js-card-toggle></button>
+          </div>
+        </li>
+        <li class="cards__card" data-js-card>
+          <div class="cards__card-header">
+            <img src="./assets/images/logo-markup-notes.svg" alt="" class="cards__card-img">
+            <div class="cards__card-text">
+              <h2 class="cards__card-title">DevLens</h2>
+              <div class="cards__card-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards__card-footer">
+            <button type="button" class="cards__card-button-remove button button--small" data-js-card-remove>Remove</button>
+            <button type="button" class="cards-card-toggle-switch" data-js-card-toggle></button>
+          </div>
+        </li>
+        <li class="cards__card" data-js-card>
+          <div class="cards__card-header">
+            <img src="./assets/images/logo-grid-guides.svg" alt="" class="cards__card-img">
+            <div class="cards__card-text">
+              <h2 class="cards__card-title">DevLens</h2>
+              <div class="cards__card-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards__card-footer">
+            <button type="button" class="cards__card-button-remove button button--small" data-js-card-remove>Remove</button>
+            <button type="button" class="cards-card-toggle-switch" data-js-card-toggle></button>
+          </div>
+        </li>
+        <li class="cards__card" data-js-card>
+          <div class="cards__card-header">
+            <img src="./assets/images/logo-markup-notes.svg" alt="" class="cards__card-img">
+            <div class="cards__card-text">
+              <h2 class="cards__card-title">DevLens</h2>
+              <div class="cards__card-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus!</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards__card-footer">
+            <button type="button" class="cards__card-button-remove button button--small" data-js-card-remove>Remove</button>
+            <button type="button" class="cards-card-toggle-switch" data-js-card-toggle></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
