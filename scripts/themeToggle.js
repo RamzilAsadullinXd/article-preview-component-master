@@ -11,8 +11,8 @@ export default function initThemeToggle() {
     body.classList.toggle('dark-mode', isDark)
 
     imgElement.src = isDark
-      ? '../assets/images/icon-sun.svg'
-      : '../assets/images/icon-moon.svg'
+      ? 'assets/images/icon-sun.svg'
+      : 'assets/images/icon-moon.svg'
   }
 
   function toggleTheme() {
